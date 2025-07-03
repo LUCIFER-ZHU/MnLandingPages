@@ -1,0 +1,259 @@
+// 导入变量和混合函数
+@import "variables.less";
+@import "mixins.less";
+
+// 重置样式
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+}
+
+body {
+  font-family: @font-family-base;
+  color: @text-primary;
+  background-color: @bg-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 标题样式
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family-heading;
+  font-weight: 600;
+  line-height: @line-height-sm;
+  margin-bottom: @spacer-sm;
+}
+
+h1 { font-size: @h1-font-size; }
+h2 { font-size: @h2-font-size; }
+h3 { font-size: @h3-font-size; }
+h4 { font-size: @h4-font-size; }
+h5 { font-size: @h5-font-size; }
+h6 { font-size: @h6-font-size; }
+
+// 段落样式
+p {
+  margin-bottom: @spacer;
+  line-height: @line-height-base;
+}
+
+// 链接样式
+a {
+  color: @primary-color;
+  text-decoration: none;
+  transition: @transition-base;
+  
+  &:hover {
+    color: darken(@primary-color, 15%);
+    text-decoration: underline;
+  }
+}
+
+// 图片样式
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// 列表样式
+ul, ol {
+  margin-bottom: @spacer;
+  padding-left: @spacer-lg;
+}
+
+li {
+  margin-bottom: @spacer-xs;
+}
+
+// 容器
+.container {
+  .container();
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 @spacer;
+}
+
+// 网格系统
+.row {
+  .flex(row, flex-start, stretch, wrap);
+  margin: 0 -@spacer-sm;
+}
+
+.col {
+  flex: 1;
+  padding: 0 @spacer-sm;
+}
+
+// 响应式列
+.col-12 { width: 100%; }
+.col-11 { width: 91.666667%; }
+.col-10 { width: 83.333333%; }
+.col-9 { width: 75%; }
+.col-8 { width: 66.666667%; }
+.col-7 { width: 58.333333%; }
+.col-6 { width: 50%; }
+.col-5 { width: 41.666667%; }
+.col-4 { width: 33.333333%; }
+.col-3 { width: 25%; }
+.col-2 { width: 16.666667%; }
+.col-1 { width: 8.333333%; }
+
+// 按钮
+.btn {
+  .button-style();
+  
+  &.btn-primary {
+    .button-style(@primary-color, @text-white);
+  }
+  
+  &.btn-secondary {
+    .button-style(@secondary-color, @text-white);
+  }
+  
+  &.btn-success {
+    .button-style(@success-color, @text-white);
+  }
+  
+  &.btn-danger {
+    .button-style(@danger-color, @text-white);
+  }
+  
+  &.btn-outline {
+    .button-style(@bg-white, @primary-color, @primary-color);
+  }
+  
+  &.btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: @font-size-lg;
+  }
+  
+  &.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: @font-size-sm;
+  }
+}
+
+// 卡片
+.card {
+  .card-style();
+  
+  .card-header {
+    padding: @spacer;
+    background-color: @bg-light;
+    border-bottom: @border-width solid @border-color;
+    border-radius: @border-radius @border-radius 0 0;
+    margin: -@spacer-lg -@spacer-lg @spacer-lg -@spacer-lg;
+  }
+  
+  .card-body {
+    padding: @spacer;
+  }
+  
+  .card-footer {
+    padding: @spacer;
+    background-color: @bg-light;
+    border-top: @border-width solid @border-color;
+    border-radius: 0 0 @border-radius @border-radius;
+    margin: @spacer-lg -@spacer-lg -@spacer-lg -@spacer-lg;
+  }
+}
+
+// 工具类
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.text-primary { color: @primary-color; }
+.text-secondary { color: @secondary-color; }
+.text-success { color: @success-color; }
+.text-danger { color: @danger-color; }
+.text-warning { color: @warning-color; }
+.text-info { color: @info-color; }
+.text-muted { color: @text-muted; }
+.text-white { color: @text-white; }
+
+.bg-primary { background-color: @bg-primary; }
+.bg-secondary { background-color: @bg-secondary; }
+.bg-light { background-color: @bg-light; }
+.bg-dark { background-color: @bg-dark; }
+.bg-white { background-color: @bg-white; }
+
+// 间距工具类
+.m-0 { margin: 0; }
+.m-1 { margin: @spacer-xs; }
+.m-2 { margin: @spacer-sm; }
+.m-3 { margin: @spacer; }
+.m-4 { margin: @spacer-lg; }
+.m-5 { margin: @spacer-xl; }
+
+.p-0 { padding: 0; }
+.p-1 { padding: @spacer-xs; }
+.p-2 { padding: @spacer-sm; }
+.p-3 { padding: @spacer; }
+.p-4 { padding: @spacer-lg; }
+.p-5 { padding: @spacer-xl; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: @spacer-xs; }
+.mt-2 { margin-top: @spacer-sm; }
+.mt-3 { margin-top: @spacer; }
+.mt-4 { margin-top: @spacer-lg; }
+.mt-5 { margin-top: @spacer-xl; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: @spacer-xs; }
+.mb-2 { margin-bottom: @spacer-sm; }
+.mb-3 { margin-bottom: @spacer; }
+.mb-4 { margin-bottom: @spacer-lg; }
+.mb-5 { margin-bottom: @spacer-xl; }
+
+// 显示/隐藏
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+
+// Flex工具类
+.flex-center { .flex-center(); }
+.justify-content-center { justify-content: center; }
+.justify-content-between { justify-content: space-between; }
+.justify-content-around { justify-content: space-around; }
+.align-items-center { align-items: center; }
+.align-items-start { align-items: flex-start; }
+.align-items-end { align-items: flex-end; }
+
+// 响应式工具类
+.media-xs({
+  .d-xs-none { display: none; }
+  .d-xs-block { display: block; }
+  .text-xs-center { text-align: center; }
+});
+
+.media-sm({
+  .d-sm-none { display: none; }
+  .d-sm-block { display: block; }
+  .text-sm-center { text-align: center; }
+});
+
+.media-md({
+  .d-md-none { display: none; }
+  .d-md-block { display: block; }
+  .text-md-center { text-align: center; }
+});
+
+.media-lg({
+  .d-lg-none { display: none; }
+  .d-lg-block { display: block; }
+  .text-lg-center { text-align: center; }
+});

@@ -1,0 +1,46 @@
+{
+  "name": "mn-landing-pages",
+  "version": "1.0.0",
+  "description": "多产品详细介绍页面项目",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --mode development --hot",
+    "build": "webpack --mode production",
+    "build:product1": "webpack --mode production --env product=product1",
+    "build:product2": "webpack --mode production --env product=product2",
+    "clean": "rimraf dist",
+    "serve": "http-server dist -p 8080",
+    "lint": "echo 'Linting completed'",
+    "test": "echo 'Tests completed'"
+  },
+  "keywords": [
+    "landing-page",
+    "html",
+    "less",
+    "webpack"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "http-server": "^14.1.1",
+    "less": "^4.2.0",
+    "less-loader": "^11.1.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "rimraf": "^5.0.5",
+    "style-loader": "^4.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

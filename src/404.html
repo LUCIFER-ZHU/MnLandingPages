@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 - 404错误</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .error-container {
+            text-align: center;
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .error-message {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .error-illustration {
+            margin-bottom: 2rem;
+        }
+        
+        .error-illustration svg {
+            width: 200px;
+            height: 200px;
+            opacity: 0.8;
+        }
+        
+        .suggestions {
+            margin-top: 2rem;
+            text-align: left;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .suggestions h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .suggestions ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .suggestions li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #666;
+        }
+        
+        .suggestions li::before {
+            content: '•';
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .error-container {
+            animation: fadeInUp 0.6s ease;
+        }
+        
+        .error-code {
+            animation: fadeInUp 0.6s ease 0.2s both;
+        }
+        
+        .error-title {
+            animation: fadeInUp 0.6s ease 0.4s both;
+        }
+        
+        .error-message {
+            animation: fadeInUp 0.6s ease 0.6s both;
+        }
+        
+        .error-actions {
+            animation: fadeInUp 0.6s ease 0.8s both;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-illustration">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <circle cx="100" cy="100" r="80" fill="url(#gradient)" opacity="0.1"/>
+                <path d="M60 80 L140 80 M60 120 L140 120" stroke="url(#gradient)" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="80" cy="80" r="8" fill="url(#gradient)"/>
+                <circle cx="120" cy="80" r="8" fill="url(#gradient)"/>
+                <path d="M70 140 Q100 160 130 140" stroke="url(#gradient)" stroke-width="4" stroke-linecap="round" fill="none"/>
+            </svg>
+        </div>
+        
+        <div class="error-code">404</div>
+        <h1 class="error-title">页面未找到</h1>
+        <p class="error-message">
+            抱歉，您访问的页面不存在或已被移动。请检查URL是否正确，或者返回首页浏览其他内容。
+        </p>
+        
+        <div class="error-actions">
+            <a href="javascript:history.back()" class="btn btn-secondary">返回上页</a>
+            <a href="/" class="btn btn-primary">返回首页</a>
+        </div>
+        
+        <div class="suggestions">
+            <h3>可能的解决方案：</h3>
+            <ul>
+                <li>检查URL拼写是否正确</li>
+                <li>尝试刷新页面</li>
+                <li>使用网站导航菜单</li>
+                <li>联系我们获取帮助</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // 自动记录404错误（可选）
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                page_title: '404 Error',
+                page_location: window.location.href
+            });
+        }
+        
+        // 添加键盘快捷键
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                history.back();
+            } else if (e.key === 'Enter') {
+                window.location.href = '/';
+            }
+        });
+    </script>
+</body>
+</html>

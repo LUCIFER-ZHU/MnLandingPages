@@ -1,0 +1,467 @@
+// 导入公共样式
+@import "../../assets/css/common.less";
+
+// 产品1特定变量
+@product-primary: #007bff;
+@product-secondary: #6c757d;
+@product-accent: #28a745;
+
+// 导航栏
+.navbar {
+  background-color: @bg-white;
+  box-shadow: @box-shadow-sm;
+  padding: @spacer 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: @zindex-fixed;
+  
+  .container {
+    .flex(row, space-between, center);
+  }
+  
+  .navbar-brand {
+    .flex(row, flex-start, center);
+    
+    .logo {
+      height: 40px;
+      margin-right: @spacer-sm;
+    }
+    
+    .brand-text {
+      font-size: @font-size-xl;
+      font-weight: 600;
+      color: @text-primary;
+    }
+  }
+  
+  .navbar-nav {
+    .flex(row, flex-end, center);
+    gap: @spacer-lg;
+    
+    .nav-link {
+      color: @text-secondary;
+      font-weight: 500;
+      padding: @spacer-sm @spacer;
+      border-radius: @border-radius;
+      transition: @transition-base;
+      
+      &:hover {
+        color: @product-primary;
+        background-color: fade(@product-primary, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// 主要内容区域
+main {
+  margin-top: 80px; // 为固定导航栏留出空间
+}
+
+// 英雄区域
+.hero {
+  padding: @spacer-xl 0;
+  background: linear-gradient(135deg, fade(@product-primary, 5%) 0%, fade(@product-accent, 5%) 100%);
+  
+  .row {
+    align-items: center;
+    min-height: 500px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: @text-primary;
+    margin-bottom: @spacer;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: @font-size-xl;
+    color: @text-secondary;
+    margin-bottom: @spacer-xl;
+    line-height: @line-height-lg;
+  }
+  
+  .hero-actions {
+    .flex(row, flex-start, center);
+    gap: @spacer;
+  }
+  
+  .hero-image {
+    text-align: center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// 通用区域样式
+section {
+  padding: @spacer-xl 0;
+  
+  .section-title {
+    font-size: @h2-font-size;
+    font-weight: 600;
+    margin-bottom: @spacer;
+    color: @text-primary;
+  }
+  
+  .section-subtitle {
+    font-size: @font-size-lg;
+    color: @text-secondary;
+    margin-bottom: @spacer-xl;
+  }
+}
+
+// 产品特性区域
+.features {
+  background-color: @bg-light;
+  
+  .feature-card {
+    .card-style(@spacer-xl, @box-shadow-sm);
+    text-align: center;
+    height: 100%;
+    transition: @transition-base;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: @box-shadow;
+    }
+    
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto @spacer;
+      .flex-center();
+      background-color: fade(@product-primary, 10%);
+      border-radius: 50%;
+      
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    
+    h3 {
+      font-size: @h4-font-size;
+      margin-bottom: @spacer-sm;
+      color: @text-primary;
+    }
+    
+    p {
+      color: @text-secondary;
+      line-height: @line-height-lg;
+    }
+  }
+}
+
+// 产品优势区域
+.benefits {
+  .row {
+    align-items: center;
+  }
+  
+  .benefits-image {
+    text-align: center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  .benefits-list {
+    .benefit-item {
+      .flex(row, flex-start, flex-start);
+      margin-bottom: @spacer-lg;
+      
+      .benefit-icon {
+        width: 30px;
+        height: 30px;
+        .flex-center();
+        background-color: @product-accent;
+        color: @text-white;
+        border-radius: 50%;
+        font-weight: 600;
+        margin-right: @spacer;
+        flex-shrink: 0;
+      }
+      
+      .benefit-content {
+        h4 {
+          font-size: @h5-font-size;
+          margin-bottom: @spacer-xs;
+          color: @text-primary;
+        }
+        
+        p {
+          color: @text-secondary;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// 价格方案区域
+.pricing {
+  background-color: @bg-light;
+  
+  .pricing-card {
+    .card-style(@spacer-xl, @box-shadow-sm);
+    text-align: center;
+    position: relative;
+    height: 100%;
+    transition: @transition-base;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: @box-shadow;
+    }
+    
+    &.featured {
+      border-color: @product-primary;
+      transform: scale(1.05);
+      
+      .popular-badge {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: @product-primary;
+        color: @text-white;
+        padding: @spacer-xs @spacer;
+        border-radius: @border-radius;
+        font-size: @font-size-sm;
+        font-weight: 600;
+      }
+    }
+    
+    h3 {
+      font-size: @h3-font-size;
+      margin-bottom: @spacer;
+      color: @text-primary;
+    }
+    
+    .price {
+      margin-bottom: @spacer-lg;
+      
+      .currency {
+        font-size: @font-size-lg;
+        color: @text-secondary;
+        vertical-align: top;
+      }
+      
+      .amount {
+        font-size: 3rem;
+        font-weight: 700;
+        color: @product-primary;
+      }
+      
+      .period {
+        font-size: @font-size-lg;
+        color: @text-secondary;
+      }
+    }
+    
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: @spacer-xl;
+      
+      li {
+        padding: @spacer-sm 0;
+        border-bottom: 1px solid @border-color;
+        color: @text-secondary;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+// 联系我们区域
+.contact {
+  .row {
+    align-items: flex-start;
+  }
+  
+  .contact-info {
+    .contact-item {
+      margin-bottom: @spacer;
+      
+      strong {
+        color: @text-primary;
+        margin-right: @spacer-sm;
+      }
+      
+      span {
+        color: @text-secondary;
+      }
+    }
+  }
+  
+  .contact-form {
+    .form-group {
+      margin-bottom: @spacer;
+      
+      label {
+        display: block;
+        margin-bottom: @spacer-xs;
+        font-weight: 500;
+        color: @text-primary;
+      }
+      
+      input,
+      textarea {
+        width: 100%;
+        padding: @spacer-sm;
+        border: @border-width solid @border-color;
+        border-radius: @border-radius;
+        font-size: @font-size-base;
+        transition: @transition-base;
+        
+        &:focus {
+          outline: none;
+          border-color: @product-primary;
+          box-shadow: 0 0 0 3px fade(@product-primary, 20%);
+        }
+      }
+      
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+    }
+  }
+}
+
+// 页脚
+.footer {
+  background-color: @bg-dark;
+  color: @text-white;
+  padding: @spacer-xl 0 @spacer 0;
+  
+  .footer-brand {
+    .flex(row, flex-start, center);
+    margin-bottom: @spacer;
+    
+    .logo {
+      height: 40px;
+      margin-right: @spacer-sm;
+      filter: brightness(0) invert(1); // 将logo变为白色
+    }
+    
+    .brand-text {
+      font-size: @font-size-xl;
+      font-weight: 600;
+    }
+  }
+  
+  .footer-description {
+    color: fade(@text-white, 80%);
+    margin-bottom: @spacer;
+  }
+  
+  .footer-links {
+    h4 {
+      margin-bottom: @spacer;
+      color: @text-white;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      
+      li {
+        margin-bottom: @spacer-xs;
+        
+        a {
+          color: fade(@text-white, 80%);
+          
+          &:hover {
+            color: @text-white;
+          }
+        }
+      }
+    }
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid fade(@text-white, 20%);
+    padding-top: @spacer;
+    margin-top: @spacer;
+    text-align: center;
+    color: fade(@text-white, 60%);
+  }
+}
+
+// 响应式设计
+.media-md({
+  .hero {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: @font-size-lg;
+    }
+  }
+  
+  .navbar {
+    .navbar-nav {
+      gap: @spacer;
+    }
+  }
+});
+
+.media-sm({
+  .hero {
+    text-align: center;
+    
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .hero-actions {
+      justify-content: center;
+      flex-direction: column;
+      gap: @spacer-sm;
+      
+      .btn {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+  }
+  
+  .navbar {
+    .navbar-nav {
+      display: none; // 在小屏幕上隐藏导航菜单，实际项目中可以添加移动端菜单
+    }
+  }
+  
+  .pricing {
+    .pricing-card.featured {
+      transform: none;
+    }
+  }
+  
+  .benefits {
+    .row {
+      flex-direction: column-reverse;
+    }
+    
+    .benefits-image {
+      margin-bottom: @spacer-lg;
+    }
+  }
+});
