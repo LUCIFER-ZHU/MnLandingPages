@@ -1,0 +1,314 @@
+// 导入全局变量和函数
+@import '../../assets/css/variables';
+
+// 重置样式
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $bg-light;
+}
+
+.container {
+    max-width: vw(1200);
+    margin: 0 auto;
+    padding: 0 vw(20);
+}
+
+// 导航栏
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: vw(20) 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .brand {
+        font-size: vw(24);
+        font-weight: 700;
+        color: $primary-color;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: vw(30);
+        
+        a {
+            text-decoration: none;
+            color: $text-color;
+            font-weight: 500;
+            font-size: vw(16);
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+// 英雄区域
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: vw(150) 0 vw(100);
+    margin-top: vw(80);
+    
+    .hero-title {
+        font-size: vw(48);
+        font-weight: 700;
+        margin-bottom: vw(20);
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: vw(20);
+        margin-bottom: vw(40);
+        opacity: 0.9;
+    }
+}
+
+// 按钮样式
+.btn {
+    display: inline-block;
+    padding: vw(15) vw(30);
+    border: none;
+    border-radius: vw(8);
+    font-size: vw(16);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &.btn-primary {
+        background: $primary-color;
+        color: white;
+        
+        &:hover {
+            background: darken($primary-color, 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+// 功能展示区域
+.features {
+    padding: vw(100) 0;
+    background: #f8f9fa;
+    
+    .section-title {
+        text-align: center;
+        font-size: vw(36);
+        font-weight: 700;
+        margin-bottom: vw(60);
+        color: $text-color;
+    }
+    
+    .feature-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(vw(300), 1fr));
+         gap: vw(40);
+     }
+    
+    .feature-card {
+         background: white;
+         padding: vw(40);
+         border-radius: vw(12);
+         text-align: center;
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         
+         &:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+         }
+         
+         .feature-icon {
+             font-size: vw(48);
+             margin-bottom: vw(20);
+         }
+         
+         h3 {
+             font-size: vw(24);
+             font-weight: 600;
+             margin-bottom: vw(15);
+             color: $text-color;
+         }
+         
+         p {
+             font-size: vw(16);
+             color: $text-muted;
+             line-height: 1.6;
+         }
+     }
+}
+
+// 联系区域
+.contact {
+    padding: vw(100) 0;
+    
+    .section-title {
+        text-align: center;
+        font-size: vw(36);
+        font-weight: 700;
+        margin-bottom: vw(60);
+        color: $text-color;
+    }
+    
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: vw(60);
+        align-items: start;
+    }
+    
+    .contact-info {
+        p {
+            font-size: vw(18);
+            margin-bottom: vw(15);
+            color: $text-color;
+        }
+    }
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: vw(20);
+        
+        input, textarea {
+            padding: vw(15);
+            border: 2px solid #e9ecef;
+            border-radius: vw(8);
+            font-size: vw(16);
+            transition: border-color 0.3s ease;
+            
+            &:focus {
+                outline: none;
+                border-color: $primary-color;
+            }
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: vw(120);
+        }
+    }
+}
+
+// 页脚
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: vw(40) 0;
+    
+    p {
+        font-size: vw(14);
+        opacity: 0.8;
+    }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+    .navbar {
+        .nav-links {
+            display: none;
+        }
+    }
+    
+    .hero {
+         padding: vw(100) 0 vw(60);
+         
+         .hero-title {
+             font-size: vw(36);
+         }
+         
+         .hero-subtitle {
+             font-size: vw(18);
+         }
+     }
+     
+     .features {
+         padding: vw(60) 0;
+         
+         .feature-grid {
+             grid-template-columns: 1fr;
+         }
+     }
+     
+     .contact {
+         padding: vw(60) 0;
+         
+         .contact-content {
+             grid-template-columns: 1fr;
+             gap: vw(40);
+        }
+    }
+}
+
+// 平滑滚动
+html {
+    scroll-behavior: smooth;
+}
+
+// 悬停效果
+.feature-card, .btn {
+    will-change: transform;
+}
+
+// 加载动画
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card {
+    animation: fadeInUp 0.6s ease forwards;
+    
+    &:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    
+    &:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+}
+
+// 使用clamp函数实现更灵活的响应式设计
+@media (min-width: $screen-md) {
+    .hero-title {
+        font-size: fluid-size(vw(36), vw(48), $screen-md, $screen-xl);
+    }
+    
+    .hero-subtitle {
+        font-size: fluid-size(vw(16), vw(20), $screen-md, $screen-xl);
+    }
+    
+    .feature-card h3 {
+        font-size: fluid-size(vw(20), vw(24), $screen-md, $screen-xl);
+    }
+}

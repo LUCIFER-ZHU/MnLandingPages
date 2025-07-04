@@ -20,13 +20,14 @@ function getProductPages() {
     
     folders.forEach(folder => {
       const scriptPath = path.join(pagesDir, folder, 'script.js');
-      const stylePath = path.join(pagesDir, folder, 'style.less');
+      const stylePath = path.join(pagesDir, folder, 'style.scss');
       const htmlPath = path.join(pagesDir, folder, 'index.html');
       
-      if (fs.existsSync(scriptPath) && fs.existsSync(stylePath) && fs.existsSync(htmlPath)) {
+      if (fs.existsSync(scriptPath) && fs.existsSync(htmlPath)) {
+        // 如果scss文件不存在，也允许加载，因为我们会创建它
         products[folder] = [
           `./src/pages/${folder}/script.js`,
-          `./src/pages/${folder}/style.less`
+          `./src/pages/${folder}/style.scss`
         ];
         
         htmlPlugins.push(new HtmlWebpackPlugin({
@@ -66,7 +67,7 @@ module.exports = (env, argv) => {
     module: {
       rules: [
         {
-          test: /\.less$/,
+          test: /\.scss$/,
           use: [
             MiniCssExtractPlugin.loader,
             {
@@ -76,9 +77,23 @@ module.exports = (env, argv) => {
               }
             },
             {
-              loader: 'less-loader',
+              loader: 'postcss-loader',
               options: {
+                postcssOptions: {
+                  plugins: [
+                    'autoprefixer'
+                  ]
+                },
                 sourceMap: !isProduction
+              }
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: !isProduction,
+                sassOptions: {
+                  outputStyle: isProduction ? 'compressed' : 'expanded'
+                }
               }
             }
           ]
@@ -90,6 +105,17 @@ module.exports = (env, argv) => {
             {
               loader: 'css-loader',
               options: {
+                sourceMap: !isProduction
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    'autoprefixer'
+                  ]
+                },
                 sourceMap: !isProduction
               }
             }

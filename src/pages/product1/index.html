@@ -3,577 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="产品1详细介绍 - 高质量的解决方案，为您的业务提供强大支持">
-    <meta name="keywords" content="产品1,解决方案,企业服务,技术支持">
-    <meta name="author" content="您的公司名称">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://product1.yourdomain.com/">
-    <meta property="og:title" content="产品1 - 专业解决方案">
-    <meta property="og:description" content="产品1详细介绍 - 高质量的解决方案，为您的业务提供强大支持">
-    <meta property="og:image" content="https://product1.yourdomain.com/assets/images/product1-og.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://product1.yourdomain.com/">
-    <meta property="twitter:title" content="产品1 - 专业解决方案">
-    <meta property="twitter:description" content="产品1详细介绍 - 高质量的解决方案，为您的业务提供强大支持">
-    <meta property="twitter:image" content="https://product1.yourdomain.com/assets/images/product1-og.jpg">
-    
-    <title>产品1 - 专业解决方案 | 您的公司名称</title>
-    
-
-    
-    <!-- 结构化数据 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "产品1",
-      "description": "高质量的解决方案，为您的业务提供强大支持",
-      "brand": {
-        "@type": "Brand",
-        "name": "您的公司名称"
-      },
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "price": "0",
-        "priceCurrency": "CNY"
-      }
-    }
-    </script>
+    <title>响应式Demo - vw/vh自适应</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
-  </ol>
-</nav>        
+    <nav class="navbar">
         <div class="container">
-            <div class="navbar-brand">
-                <img src="/assets/images/logo.svg" alt="公司Logo" class="logo">
-                <span class="brand-text">您的公司</span>
-            </div>
-            
-            <!-- 移动端菜单按钮 -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- 导航菜单 -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav ms-auto">
-                    <a href="#features" class="nav-link">产品特性</a>
-                    <a href="#benefits" class="nav-link">产品优势</a>
-                    <a href="#pricing" class="nav-link">价格方案</a>
-                    <a href="#contact" class="nav-link">联系我们</a>
-                </div>
+            <div class="brand">响应式Demo</div>
+            <div class="nav-links">
+                <a href="#hero">首页</a>
+                <a href="#features">功能</a>
+                <a href="#contact">联系</a>
             </div>
         </div>
     </nav>
 
-    <!-- 主要内容 -->
-    <main>
-        <!-- 英雄区域 -->
-        <section class="hero">
-            <div class="container">
-                <div class="row align-items-center min-vh-100">
-                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                        <div class="hero-content">
-                            <h1 class="hero-title display-3 fw-bold mb-4">数据分析平台</h1>
-                            <p class="hero-subtitle lead mb-4">为您的业务提供高质量、可靠的数据分析和解决方案，助力企业数字化转型和智能决策</p>
-                            <div class="hero-actions d-flex flex-wrap gap-3 mb-4">
-                                <a href="#contact" class="btn btn-primary btn-lg px-4 py-3 rounded-pill">
-                                    <i class="fas fa-rocket me-2"></i>立即咨询
-                                </a>
-                                <a href="#features" class="btn btn-outline-primary btn-lg px-4 py-3 rounded-pill">
-                                    <i class="fas fa-play me-2"></i>了解更多
-                                </a>
-                            </div>
-                            <div class="hero-stats row text-center">
-                                <div class="col-4">
-                                    <div class="stat-number h3 fw-bold text-primary mb-1">1000+</div>
-                                    <div class="stat-label text-muted small">企业客户</div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="stat-number h3 fw-bold text-primary mb-1">99.9%</div>
-                                    <div class="stat-label text-muted small">系统稳定性</div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="stat-number h3 fw-bold text-primary mb-1">24/7</div>
-                                    <div class="stat-label text-muted small">技术支持</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="hero-image text-center">
-                            <div class="hero-visual p-4">
-                                <div class="chart-container bg-light rounded-4 p-4 shadow-lg">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h5 class="mb-0">实时数据分析</h5>
-                                        <span class="badge bg-success">在线</span>
-                                    </div>
-                                    <div class="chart-bars">
-                                        <div class="bar-item d-flex align-items-end mb-2">
-                                            <div class="bar bg-primary rounded" style="height: 60px; width: 20px;"></div>
-                                            <div class="bar bg-primary rounded ms-1" style="height: 80px; width: 20px;"></div>
-                                            <div class="bar bg-primary rounded ms-1" style="height: 45px; width: 20px;"></div>
-                                            <div class="bar bg-primary rounded ms-1" style="height: 90px; width: 20px;"></div>
-                                            <div class="bar bg-primary rounded ms-1" style="height: 70px; width: 20px;"></div>
-                                        </div>
-                                    </div>
-                                    <div class="metrics row text-center mt-3">
-                                        <div class="col-6">
-                                            <div class="metric-value h6 text-success mb-0">↗ 23.5%</div>
-                                            <div class="metric-label small text-muted">增长率</div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="metric-value h6 text-info mb-0">1.2M</div>
-                                            <div class="metric-label small text-muted">数据点</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- 英雄区域 -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1 class="hero-title">vw/vh 响应式布局演示</h1>
+            <p class="hero-subtitle">基于1920×1080设计稿的自适应方案</p>
+            <button class="btn btn-primary">开始体验</button>
+        </div>
+    </section>
 
-        <!-- 产品特性 -->
-        <section id="features" class="features py-5 bg-light">
-            <div class="container">
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="section-title display-5 fw-bold mb-3">产品特性</h2>
-                        <p class="section-subtitle lead text-muted">我们的数据分析平台具备以下核心特性，为您的业务决策提供强有力支持</p>
+    <!-- 功能展示 -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">核心特性</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
                     </div>
+                    <h3>精确适配</h3>
+                    <p>基于vw单位实现精确的屏幕适配，完美还原设计稿</p>
                 </div>
-                
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-card card h-100 border-0 shadow-sm hover-lift">
-                            <div class="card-body text-center p-4">
-                                <div class="feature-icon mb-4">
-                                    <div class="icon-circle bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px;">
-                                        <i class="fas fa-tachometer-alt fa-2x text-primary"></i>
-                                    </div>
-                                </div>
-                                <h3 class="h4 fw-bold mb-3">高性能处理</h3>
-                                <p class="text-muted mb-0">采用先进的分布式架构和内存计算技术，确保大数据处理的高效性和实时性，支持PB级数据分析</p>
-                            </div>
-                        </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-card card h-100 border-0 shadow-sm hover-lift">
-                            <div class="card-body text-center p-4">
-                                <div class="feature-icon mb-4">
-                                    <div class="icon-circle bg-success bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px;">
-                                        <i class="fas fa-shield-alt fa-2x text-success"></i>
-                                    </div>
-                                </div>
-                                <h3 class="h4 fw-bold mb-3">安全可靠</h3>
-                                <p class="text-muted mb-0">多层安全防护机制，包括数据加密、访问控制和审计日志，符合GDPR、SOX等国际安全标准</p>
-                            </div>
-                        </div>
+                    <h3>响应式设计</h3>
+                    <p>支持各种屏幕尺寸的完美显示，从手机到大屏一体适配</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-card card h-100 border-0 shadow-sm hover-lift">
-                            <div class="card-body text-center p-4">
-                                <div class="feature-icon mb-4">
-                                    <div class="icon-circle bg-info bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px;">
-                                        <i class="fas fa-expand-arrows-alt fa-2x text-info"></i>
-                                    </div>
-                                </div>
-                                <h3 class="h4 fw-bold mb-3">弹性扩展</h3>
-                                <p class="text-muted mb-0">云原生架构设计，支持水平和垂直扩展，根据业务需求自动调整资源配置，降低运营成本</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-card card h-100 border-0 shadow-sm hover-lift">
-                            <div class="card-body text-center p-4">
-                                <div class="feature-icon mb-4">
-                                    <div class="icon-circle bg-warning bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px;">
-                                        <i class="fas fa-chart-line fa-2x text-warning"></i>
-                                    </div>
-                                </div>
-                                <h3 class="h4 fw-bold mb-3">智能分析</h3>
-                                <p class="text-muted mb-0">集成机器学习算法，提供预测分析、异常检测和智能推荐，帮助发现数据中的隐藏价值</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-card card h-100 border-0 shadow-sm hover-lift">
-                            <div class="card-body text-center p-4">
-                                <div class="feature-icon mb-4">
-                                    <div class="icon-circle bg-danger bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px;">
-                                        <i class="fas fa-palette fa-2x text-danger"></i>
-                                    </div>
-                                </div>
-                                <h3 class="h4 fw-bold mb-3">可视化报表</h3>
-                                <p class="text-muted mb-0">丰富的图表类型和交互式仪表板，支持拖拽式报表设计，让数据展示更加直观和美观</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-card card h-100 border-0 shadow-sm hover-lift">
-                            <div class="card-body text-center p-4">
-                                <div class="feature-icon mb-4">
-                                    <div class="icon-circle bg-secondary bg-opacity-10 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px;">
-                                        <i class="fas fa-plug fa-2x text-secondary"></i>
-                                    </div>
-                                </div>
-                                <h3 class="h4 fw-bold mb-3">开放集成</h3>
-                                <p class="text-muted mb-0">提供RESTful API和SDK，支持与主流数据源和第三方系统无缝集成，构建统一的数据生态</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>高性能</h3>
+                    <p>轻量级CSS，快速加载，流畅的用户体验</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 产品优势 -->
-        <section id="benefits" class="benefits py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                        <div class="benefits-image">
-                            <div class="position-relative">
-                                <div class="bg-primary bg-opacity-10 rounded-4 p-5">
-                                    <div class="row g-3">
-                                        <div class="col-6">
-                                            <div class="bg-white rounded-3 p-3 shadow-sm text-center">
-                                                <i class="fas fa-users fa-2x text-primary mb-2"></i>
-                                                <div class="h6 mb-0">专业团队</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="bg-white rounded-3 p-3 shadow-sm text-center">
-                                                <i class="fas fa-cogs fa-2x text-success mb-2"></i>
-                                                <div class="h6 mb-0">定制服务</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="bg-white rounded-3 p-3 shadow-sm text-center">
-                                                <i class="fas fa-sync-alt fa-2x text-info mb-2"></i>
-                                                <div class="h6 mb-0">持续更新</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="bg-white rounded-3 p-3 shadow-sm text-center">
-                                                <i class="fas fa-headset fa-2x text-warning mb-2"></i>
-                                                <div class="h6 mb-0">24/7支持</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                                    <div class="bg-white rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
-                                        <i class="fas fa-award fa-3x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="benefits-content">
-                            <h2 class="section-title display-5 fw-bold mb-4">为什么选择我们？</h2>
-                            <p class="lead text-muted mb-4">我们不仅提供优秀的产品，更重要的是为您提供全方位的服务保障</p>
-                            <div class="benefits-list">
-                                <div class="benefit-item d-flex align-items-start mb-4">
-                                    <div class="benefit-icon me-3">
-                                        <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                            <i class="fas fa-check text-primary"></i>
-                                        </div>
-                                    </div>
-                                    <div class="benefit-content">
-                                        <h4 class="h5 fw-bold mb-2">专业团队支持</h4>
-                                        <p class="text-muted mb-0">拥有10年以上行业经验的专业团队，包括数据科学家、工程师和业务顾问，提供全方位技术支持和咨询服务</p>
-                                    </div>
-                                </div>
-                                <div class="benefit-item d-flex align-items-start mb-4">
-                                    <div class="benefit-icon me-3">
-                                        <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                            <i class="fas fa-check text-success"></i>
-                                        </div>
-                                    </div>
-                                    <div class="benefit-content">
-                                        <h4 class="h5 fw-bold mb-2">定制化服务</h4>
-                                        <p class="text-muted mb-0">根据客户具体业务场景和需求，提供个性化的解决方案设计、实施和优化服务，确保最佳投资回报</p>
-                                    </div>
-                                </div>
-                                <div class="benefit-item d-flex align-items-start mb-4">
-                                    <div class="benefit-icon me-3">
-                                        <div class="bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                            <i class="fas fa-check text-info"></i>
-                                        </div>
-                                    </div>
-                                    <div class="benefit-content">
-                                        <h4 class="h5 fw-bold mb-2">持续创新更新</h4>
-                                        <p class="text-muted mb-0">产品持续迭代更新，紧跟技术发展趋势，定期发布新功能和性能优化，确保您始终使用最先进的技术</p>
-                                    </div>
-                                </div>
-                                <div class="benefit-item d-flex align-items-start">
-                                    <div class="benefit-icon me-3">
-                                        <div class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                            <i class="fas fa-check text-warning"></i>
-                                        </div>
-                                    </div>
-                                    <div class="benefit-content">
-                                        <h4 class="h5 fw-bold mb-2">全天候技术支持</h4>
-                                        <p class="text-muted mb-0">提供7×24小时技术支持服务，包括在线客服、电话支持和现场服务，确保您的业务连续性</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- 联系区域 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> demo@example.com</p>
+                    <p><i class="fas fa-phone"></i> 400-123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 北京市朝阳区科技园区88号</p>
                 </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="您的姓名" required>
+                    <input type="email" placeholder="您的邮箱" required>
+                    <textarea placeholder="留言内容" rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary">发送消息</button>
+                </form>
             </div>
-        </section>
-
-        <!-- 价格方案 -->
-        <section id="pricing" class="pricing py-5 bg-light">
-            <div class="container">
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="section-title display-5 fw-bold mb-3">价格方案</h2>
-                        <p class="section-subtitle lead text-muted">选择适合您业务规模的方案，所有方案都包含核心功能和技术支持</p>
-                    </div>
-                </div>
-                
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="pricing-card card h-100 border-0 shadow-sm hover-lift">
-                            <div class="card-body text-center p-4">
-                                <h3 class="h4 fw-bold mb-3">基础版</h3>
-                                <div class="price mb-4">
-                                    <span class="currency h5 text-muted">¥</span>
-                                    <span class="amount display-4 fw-bold text-primary">999</span>
-                                    <span class="period text-muted">/月</span>
-                                </div>
-                                <ul class="features list-unstyled mb-4">
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>基础数据分析功能</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>最多5个用户</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>10GB数据存储</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>标准报表模板</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>邮件技术支持</li>
-                                </ul>
-                                <a href="#contact" class="btn btn-outline-primary btn-lg w-100 rounded-pill">选择方案</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="pricing-card card h-100 border-primary shadow-lg position-relative">
-                            <div class="position-absolute top-0 start-50 translate-middle">
-                                <span class="badge bg-primary px-3 py-2 rounded-pill">最受欢迎</span>
-                            </div>
-                            <div class="card-body text-center p-4 pt-5">
-                                <h3 class="h4 fw-bold mb-3 text-primary">专业版</h3>
-                                <div class="price mb-4">
-                                    <span class="currency h5 text-muted">¥</span>
-                                    <span class="amount display-4 fw-bold text-primary">1999</span>
-                                    <span class="period text-muted">/月</span>
-                                </div>
-                                <ul class="features list-unstyled mb-4">
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>全部高级分析功能</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>最多20个用户</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>100GB数据存储</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>自定义报表和仪表板</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>API集成支持</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>优先技术支持</li>
-                                </ul>
-                                <a href="#contact" class="btn btn-primary btn-lg w-100 rounded-pill">选择方案</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="pricing-card card h-100 border-0 shadow-sm hover-lift">
-                            <div class="card-body text-center p-4">
-                                <h3 class="h4 fw-bold mb-3">企业版</h3>
-                                <div class="price mb-4">
-                                    <span class="currency h5 text-muted">¥</span>
-                                    <span class="amount display-4 fw-bold text-primary">3999</span>
-                                    <span class="period text-muted">/月</span>
-                                </div>
-                                <ul class="features list-unstyled mb-4">
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>企业级定制功能</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>无限用户数量</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>无限数据存储</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>高级安全和合规</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>专属客户经理</li>
-                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>7×24小时专属支持</li>
-                                </ul>
-                                <a href="#contact" class="btn btn-outline-primary btn-lg w-100 rounded-pill">选择方案</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row justify-content-center mt-5">
-                    <div class="col-lg-8 text-center">
-                        <div class="bg-white rounded-4 p-4 shadow-sm">
-                            <h5 class="fw-bold mb-3">需要定制方案？</h5>
-                            <p class="text-muted mb-3">我们为大型企业和特殊需求客户提供完全定制的解决方案</p>
-                            <a href="#contact" class="btn btn-outline-primary rounded-pill px-4">联系销售团队</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 联系我们 -->
-        <section id="contact" class="contact py-5">
-            <div class="container">
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="section-title display-5 fw-bold mb-3">联系我们</h2>
-                        <p class="section-subtitle lead text-muted">我们的专业团队随时为您提供帮助，让我们一起探讨如何为您的业务创造价值</p>
-                    </div>
-                </div>
-                
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                        <div class="contact-info">
-                            <div class="contact-item d-flex align-items-center mb-4 p-4 bg-light rounded-4">
-                                <div class="contact-icon me-4">
-                                    <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                        <i class="fas fa-phone fa-xl text-primary"></i>
-                                    </div>
-                                </div>
-                                <div class="contact-content">
-                                    <h4 class="h5 fw-bold mb-1">电话咨询</h4>
-                                    <p class="text-muted mb-0">400-123-4567</p>
-                                    <small class="text-muted">工作日 9:00-18:00</small>
-                                </div>
-                            </div>
-                            <div class="contact-item d-flex align-items-center mb-4 p-4 bg-light rounded-4">
-                                <div class="contact-icon me-4">
-                                    <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                        <i class="fas fa-envelope fa-xl text-success"></i>
-                                    </div>
-                                </div>
-                                <div class="contact-content">
-                                    <h4 class="h5 fw-bold mb-1">邮箱联系</h4>
-                                    <p class="text-muted mb-0">contact@dataplatform.com</p>
-                                    <small class="text-muted">24小时内回复</small>
-                                </div>
-                            </div>
-                            <div class="contact-item d-flex align-items-center mb-4 p-4 bg-light rounded-4">
-                                <div class="contact-icon me-4">
-                                    <div class="bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                        <i class="fas fa-map-marker-alt fa-xl text-info"></i>
-                                    </div>
-                                </div>
-                                <div class="contact-content">
-                                    <h4 class="h5 fw-bold mb-1">公司地址</h4>
-                                    <p class="text-muted mb-0">北京市朝阳区建国门外大街1号</p>
-                                    <small class="text-muted">国贸大厦A座20层</small>
-                                </div>
-                            </div>
-                            <div class="contact-item d-flex align-items-center p-4 bg-light rounded-4">
-                                <div class="contact-icon me-4">
-                                    <div class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                        <i class="fas fa-comments fa-xl text-warning"></i>
-                                    </div>
-                                </div>
-                                <div class="contact-content">
-                                    <h4 class="h5 fw-bold mb-1">在线客服</h4>
-                                    <p class="text-muted mb-0">微信: DataPlatform2024</p>
-                                    <small class="text-muted">实时在线支持</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="contact-form">
-                            <div class="card border-0 shadow-lg">
-                                <div class="card-body p-5">
-                                    <h4 class="fw-bold mb-4 text-center">获取免费咨询</h4>
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-md-6 mb-3">
-                                                <label for="name" class="form-label fw-semibold">姓名 *</label>
-                                                <input type="text" class="form-control form-control-lg" id="name" name="name" required>
-                                            </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="phone" class="form-label fw-semibold">电话 *</label>
-                                                <input type="tel" class="form-control form-control-lg" id="phone" name="phone" required>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label fw-semibold">邮箱 *</label>
-                                            <input type="email" class="form-control form-control-lg" id="email" name="email" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="company" class="form-label fw-semibold">公司名称</label>
-                                            <input type="text" class="form-control form-control-lg" id="company" name="company">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="industry" class="form-label fw-semibold">所属行业</label>
-                                            <select class="form-select form-select-lg" id="industry" name="industry">
-                                                <option value="">请选择行业</option>
-                                                <option value="finance">金融服务</option>
-                                                <option value="retail">零售电商</option>
-                                                <option value="manufacturing">制造业</option>
-                                                <option value="healthcare">医疗健康</option>
-                                                <option value="education">教育培训</option>
-                                                <option value="other">其他</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="message" class="form-label fw-semibold">需求描述 *</label>
-                                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="请简要描述您的数据分析需求..." required></textarea>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill">
-                                            <i class="fas fa-paper-plane me-2"></i>提交咨询申请
-                                        </button>
-                                        <p class="text-muted text-center mt-3 small">我们承诺保护您的隐私信息，不会用于其他商业用途</p>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <div class="footer-brand">
-                        <img src="/assets/images/logo.svg" alt="公司Logo" class="logo">
-                        <span class="brand-text">您的公司</span>
-                    </div>
-                    <p class="footer-description">专业的技术解决方案提供商，致力于为企业提供高质量的产品和服务。</p>
-                </div>
-                <div class="col-6">
-                    <div class="footer-links">
-                        <h4>快速链接</h4>
-                        <ul>
-                            <li><a href="#features">产品特性</a></li>
-                            <li><a href="#benefits">产品优势</a></li>
-                            <li><a href="#pricing">价格方案</a></li>
-                            <li><a href="#contact">联系我们</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 您的公司名称. 保留所有权利.</p>
-            </div>
+            <p>&copy; 2024 响应式Demo. vw/vh自适应布局演示.</p>
         </div>
     </footer>
 
+    <!-- 脚本 -->
+    <script src="script.js"></script>
 </body>
 </html>

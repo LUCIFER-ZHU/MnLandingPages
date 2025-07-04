@@ -16,7 +16,8 @@
   "keywords": [
     "landing-page",
     "html",
-    "less",
+    "sass",
+    "scss",
     "webpack"
   ],
   "author": "",
@@ -27,16 +28,19 @@
     "jquery": "^3.7.1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
     "http-server": "^14.1.1",
-    "less": "^4.2.0",
-    "less-loader": "^11.1.3",
     "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.1.1",
     "rimraf": "^5.0.5",
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.89.0",
