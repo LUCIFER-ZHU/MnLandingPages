@@ -6,14 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:product1": "vite build --mode product1",
-    "build:product2": "vite build --mode product2",
     "preview": "vite preview",
-    "clean": "rimraf dist",
-    "lint": "echo 'Linting completed'",
-    "test": "echo 'Tests completed'",
-    "analyze": "vite build --mode analyze",
-    "serve:dist": "vite preview --port 8080"
+    "clean": "rimraf dist"
   },
   "keywords": [
     "landing-page",
@@ -37,7 +31,6 @@
     "sass": "^1.89.2",
     "terser": "^5.43.1",
     "vite": "^7.0.5",
-    "vite-plugin-html": "^3.2.2",
     "vite-plugin-static-copy": "^3.1.1"
   }
 }
