@@ -89,8 +89,19 @@ MnLandingPages/
 1. 安装依赖：`npm install`
 2. 开发模式：`npm run dev`
 3. 构建生产：`npm run build`
-4. 部署到服务器的dist目录
-5. 配置Nginx虚拟主机
+4. 预览构建结果：`npm run preview`
+5. 部署到服务器的dist目录
+6. 配置Nginx虚拟主机
+
+## 构建工具
+
+本项目使用Vite作为构建工具，相比Webpack具有以下优势：
+
+- 更快的冷启动速度
+- 即时的热模块替换(HMR)
+- 按需编译
+- 优化的构建过程
+- 更简洁的配置
 
 ## SEO优化建议
 

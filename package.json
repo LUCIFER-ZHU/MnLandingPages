@@ -4,21 +4,23 @@
   "description": "多产品详细介绍页面项目",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --mode development --hot",
-    "build": "webpack --mode production",
-    "build:product1": "webpack --mode production --env product=product1",
-    "build:product2": "webpack --mode production --env product=product2",
+    "dev": "vite",
+    "build": "vite build",
+    "build:product1": "vite build --mode product1",
+    "build:product2": "vite build --mode product2",
+    "preview": "vite preview",
     "clean": "rimraf dist",
-    "serve": "http-server dist -p 8080",
     "lint": "echo 'Linting completed'",
-    "test": "echo 'Tests completed'"
+    "test": "echo 'Tests completed'",
+    "analyze": "vite build --mode analyze",
+    "serve:dist": "vite preview --port 8080"
   },
   "keywords": [
     "landing-page",
     "html",
     "sass",
     "scss",
-    "webpack"
+    "vite"
   ],
   "author": "",
   "license": "MIT",
@@ -28,23 +30,14 @@
     "jquery": "^3.7.1"
   },
   "devDependencies": {
+    "@vitejs/plugin-legacy": "^7.0.1",
     "autoprefixer": "^10.4.21",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.8.1",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.5.3",
-    "http-server": "^14.1.1",
-    "mini-css-extract-plugin": "^2.7.6",
     "postcss": "^8.5.6",
-    "postcss-loader": "^8.1.1",
     "rimraf": "^5.0.5",
     "sass": "^1.89.2",
-    "sass-loader": "^16.0.5",
-    "style-loader": "^4.0.0",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "terser": "^5.43.1",
+    "vite": "^7.0.5",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-static-copy": "^3.1.1"
   }
 }

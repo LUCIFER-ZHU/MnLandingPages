@@ -4,6 +4,19 @@ import { smoothScroll, validateForm, showNotification } from '../../assets/js/ut
 // 导入样式
 import './style.scss';
 
+// 导入Bootstrap和jQuery（如果需要的话）
+import 'bootstrap/dist/css/bootstrap.min.css';
+import * as bootstrap from 'bootstrap';
+import $ from 'jquery';
+
+// 导出环境变量（可以在模板中使用）
+export const env = {
+    APP_TITLE: import.meta.env.VITE_APP_TITLE || '产品1',
+    APP_PRODUCT: import.meta.env.VITE_APP_PRODUCT || 'product1',
+    BASE_URL: import.meta.env.VITE_APP_BASE_URL || '/',
+    APP_ENV: import.meta.env.VITE_APP_ENV || 'production'
+};
+
 // DOM加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
     // 初始化页面功能

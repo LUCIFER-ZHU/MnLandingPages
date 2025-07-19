@@ -1,8 +1,11 @@
 // 首页JavaScript文件
 // 导入Bootstrap和jQuery
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap';
+import * as bootstrap from 'bootstrap';
 import $ from 'jquery';
+
+// 导入样式（如果有的话）
+import './index.css';
 
 // 页面加载完成后执行
 $(document).ready(function() {
@@ -26,3 +29,10 @@ $(document).ready(function() {
         }
     });
 });
+
+// 导出环境变量（可以在模板中使用）
+export const env = {
+    APP_TITLE: import.meta.env.VITE_APP_TITLE || '多产品详细介绍页面项目',
+    BASE_URL: import.meta.env.VITE_APP_BASE_URL || '/',
+    APP_ENV: import.meta.env.VITE_APP_ENV || 'production'
+};

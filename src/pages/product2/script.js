@@ -1,10 +1,21 @@
-// 导入依赖
+// 导入样式
+import './style.scss';
+
+// 导入Bootstrap和jQuery（如果需要的话）
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap';
+import * as bootstrap from 'bootstrap';
 import $ from 'jquery';
 
 // 导入公共工具函数
 import { smoothScroll, validateForm, showNotification, debounce, throttle } from '../../assets/js/utils.js';
+
+// 导出环境变量（可以在模板中使用）
+export const env = {
+    APP_TITLE: import.meta.env.VITE_APP_TITLE || '产品2',
+    APP_PRODUCT: import.meta.env.VITE_APP_PRODUCT || 'product2',
+    BASE_URL: import.meta.env.VITE_APP_BASE_URL || '/',
+    APP_ENV: import.meta.env.VITE_APP_ENV || 'production'
+};
 
 // 页面初始化
 document.addEventListener('DOMContentLoaded', function() {
