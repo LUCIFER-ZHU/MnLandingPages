@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新员工录用审批表</title>
+    <style>
+        /* 全局样式重置和基础设置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "SimSun", Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.4;
+        }
+
+        /* 主容器样式 */
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 表格标题样式 */
+        .form-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* 表格容器样式 - 使用CSS Grid */
+        .approval-table {
+            display: grid;
+            grid-template-columns: 150px 1fr 150px 1fr;
+            gap: 0;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 12px;
+            border: 1px solid #000;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        /* 面试情况特殊布局 */
+        .interview-section {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 12px;
+            border: 1px solid #000;
+        }
+        
+        .interview-cell {
+            border: 1px solid #000;
+            padding: 6px 8px;
+            vertical-align: middle;
+            text-align: left;
+        }
+        
+        .interview-left-header {
+            width: 100px;
+            background-color: #f8f8f8;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* 通用单元格样式 */
+        .cell {
+            padding: 6px 8px;
+            display: flex;
+            align-items: center;
+            min-height: 30px;
+            background-color: white;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        /* 表头样式 */
+        .header-cell {
+            background-color: #f8f8f8;
+            font-weight: bold;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* 输入区域样式 */
+        .input-cell {
+            background-color: white;
+        }
+
+        /* 跨列样式 */
+        .span-2 {
+            grid-column: span 2;
+        }
+        
+        .span-3 {
+            grid-column: span 3;
+        }
+        
+        .span-4 {
+            grid-column: span 4;
+        }
+
+        /* 跨行样式 */
+        .row-span-6 {
+            grid-row: span 6;
+            align-items: flex-start;
+            padding-top: 8px;
+        }
+
+        /* 特殊边框处理 */
+        .no-border-right {
+            border-right: none;
+        }
+        
+        .no-border-bottom {
+            border-bottom: none;
+        }
+
+        /* 复选框容器样式 */
+        .checkbox-container {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 4px;
+            transform: scale(1.2);
+        }
+
+        /* 面试结论行样式 */
+        .interview-result {
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* 特殊背景样式 */
+        .title-bg {
+            background-color: #f0f0f0;
+            font-weight: bold;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* 审批内容区域 */
+        .approval-content {
+            min-height: 100px;
+            align-items: flex-start;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        /* 小字体样式 */
+        .small-text {
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 主表单容器 -->
+    <div class="form-container">
+        <!-- 表单标题 -->
+        <h1 class="form-title">新员工录用审批表</h1>
+        
+        <!-- 主审批表格 -->
+        <div class="approval-table">
+            <!-- 基本信息部分 -->
+            <div class="cell header-cell">新员工姓名</div>
+            <div class="cell input-cell">未填</div>
+            <div class="cell header-cell">录用部门</div>
+            <div class="cell input-cell">外贸业务部</div>
+            
+            <div class="cell header-cell">职位/职级</div>
+            <div class="cell input-cell">外贸业务员</div>
+            <div class="cell header-cell">计划入职时间</div>
+            <div class="cell input-cell">2025年6月23日</div>
+            
+            <div class="cell header-cell">最高学历</div>
+            <div class="cell input-cell">本科</div>
+            <div class="cell header-cell">最高学位</div>
+            <div class="cell input-cell"></div>
+            
+            <div class="cell header-cell">最后毕业学校</div>
+            <div class="cell input-cell">江苏大学</div>
+            <div class="cell header-cell">籍贯</div>
+            <div class="cell input-cell">江苏泰兴</div>
+            
+            <div class="cell header-cell">毕业时间</div>
+            <div class="cell input-cell">2024.06.17</div>
+            <div class="cell header-cell">工作时间</div>
+            <div class="cell input-cell">2024.02</div>
+            
+            <div class="cell header-cell">申请日期</div>
+            <div class="cell input-cell">2025.6.16</div>
+            <div class="cell header-cell">希望到岗日期</div>
+            <div class="cell input-cell">2025年6月23日前</div>
+
+        </div>
+        
+        <!-- 面试情况特殊区域 -->
+        <table class="interview-section">
+            <tr>
+                <td class="interview-cell interview-left-header" rowspan="6">面试情况</td>
+                <td class="interview-cell title-bg" colspan="4">审批流程</td>
+            </tr>
+            <tr>
+                <td class="interview-cell header-cell">面试人员所在部门</td>
+                <td class="interview-cell header-cell">面试人员姓名</td>
+                <td class="interview-cell header-cell">面试日期</td>
+                <td class="interview-cell header-cell">面试结论</td>
+            </tr>
+            <tr>
+                <td class="interview-cell">面试结论</td>
+                <td class="interview-cell">人事部</td>
+                <td class="interview-cell">陈芳</td>
+                <td class="interview-cell">
+                    <div class="checkbox-container">
+                        <input type="checkbox" checked disabled>
+                        <span>同意</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" disabled>
+                        <span>不同意</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="interview-cell">王静</td>
+                <td class="interview-cell">外贸业务部</td>
+                <td class="interview-cell">2025年6月12日</td>
+                <td class="interview-cell">
+                    <div class="checkbox-container">
+                        <input type="checkbox" checked disabled>
+                        <span>同意</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" disabled>
+                        <span>不同意</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="interview-cell"></td>
+                <td class="interview-cell"></td>
+                <td class="interview-cell"></td>
+                <td class="interview-cell">
+                    <div class="checkbox-container">
+                        <input type="checkbox" disabled>
+                        <span>同意</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" disabled>
+                        <span>不同意</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="interview-cell" colspan="4">
+                    ☑需要录用，建议新员工入职日期：从2025年6月23日
+                </td>
+            </tr>
+        </table>
+        
+        <!-- 重新开始表格 -->
+        <div class="approval-table">
+
+            <!-- 用人部门意见 -->
+            <div class="cell header-cell">用人部门意见</div>
+            <div class="cell span-3">
+                用人部门负责人（签字）：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期：&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日
+            </div>
+
+            <!-- 人力资源部审批意见 -->
+            <div class="cell header-cell">人力资源部审批意见</div>
+            <div class="cell span-3 approval-content">
+                <div>招聘新人员建议薪酬制及入职薪酬确保正月薪数前税5000提成元</div>
+                <div style="margin-top: 10px;">（试用期&nbsp;&nbsp;3&nbsp;&nbsp;个月，试用期薪酬：底薪3500提成元）</div>
+                <div style="margin-top: 10px;">建议新员工入职日期为：2025年6月23日</div>
+                <div style="margin-top: 15px;">人力资源部负责人（签字）：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期：&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日</div>
+            </div>
+
+            <!-- 副总经理审批意见 -->
+            <div class="cell header-cell">副总经理审批意见</div>
+            <div class="cell span-3 approval-content">
+                <div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" disabled>
+                        <span>是否同意该员工入职：</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" disabled>
+                        <span>同意</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" disabled>
+                        <span>不同意</span>
+                    </div>
+                </div>
+                <div style="margin-top: 15px;">不同意入职，主要原因：</div>
+                <div style="margin-top: 15px;">其它意见或建议说：</div>
+                <div style="margin-top: 15px;">副总经理（签字）：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期：&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日</div>
+            </div>
+
+            <!-- 总经理审批意见 -->
+            <div class="cell header-cell">总经理审批意见</div>
+            <div class="cell span-3 approval-content">
+                <div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" disabled>
+                        <span>是否同意该员工入职：</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" disabled>
+                        <span>同意</span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" disabled>
+                        <span>不同意</span>
+                    </div>
+                </div>
+                <div style="margin-top: 15px;">不同意入职，主要原因：</div>
+                <div style="margin-top: 15px;">其它意见或建议说：</div>
+                <div style="margin-top: 15px;">总经理（签字）：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期：&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
